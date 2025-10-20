@@ -1,0 +1,16 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/spreaeb3/public_html/
+    - /bin/rsync -av --delete \
+        --exclude '.git*' \
+        --exclude '.cpanel.yml' \
+        --exclude 'wp-content/uploads/' \
+        --exclude 'wp-content/cache/' \
+        --exclude 'wp-content/et-cache/' \
+        --exclude 'wp-content/ai1wm-backups/' \
+        --exclude 'error_log' \
+        ./ $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
+    - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
+    - /usr/local/cpanel/bin/php-fpm_reload_service
