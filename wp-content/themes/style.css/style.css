@@ -1,0 +1,1268 @@
+/*
+ Theme Name:     Molti
+ Theme URI:      https://samarj.com/molti
+ Description:    A Modern Design Multipurpose Business Child Theme for Divi.
+ Author:         SamarJ
+ Author URI:     https://samarj.com/
+ Template:       Divi
+ Version:        1.1.2
+*/
+
+
+/* 
+------------------------------------------------------- */
+
+/*No Horizontal Scroll bar*/
+#page-container { overflow:hidden; }
+/*Fixing the Button Position for Firefox for Newsletter*/
+@-moz-document url-prefix() {
+    .molti-newsletter.et_pb_newsletter .et_pb_button  {
+        margin-top: -69px !Important;
+    }
+	.molti-newsletter-single-post.et_pb_newsletter .et_pb_button  {
+        margin-top: -83px !Important;
+    }
+}
+
+
+.molti-header-5 .et_mobile_menu{
+	width: 280%!important;
+    margin-left: -195px;
+    margin-top: 45px;
+}
+
+/*Mobile Menu Customizations*/
+/*To add Box Shadow and Corner Radius to Mobile Menu*/
+.et_mobile_menu{
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.21) 0px 15px 30px;
+}
+/*This will add Padding and Margin (Spacing) around the Mobile Menu Items*/
+.et_mobile_menu li a{
+	padding: 13px 5%;
+    margin: 10px 0;
+}
+/*To hide the Sub Menu in mOBILE*/
+#page-container .mobile_nav li ul.hide {
+    display: none !important;
+}
+/**** This adjusts the positioning and the background transparency of the parent menu item on mobile ****/
+#page-container .mobile_nav .menu-item-has-children {
+    position: relative;
+}
+#page-container .mobile_nav .menu-item-has-children > a {
+    background: transparent;
+}
+/**** This styles the icon and moves it to the right ****/
+#page-container .mobile_nav .menu-item-has-children > a + span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 3;
+}
+.menu-closed{
+	border-left:1px solid #eee;
+}
+/**** Styling for the Sub Menu Toggle Icon in Mobile Menu ****/
+#page-container span.menu-closed:before {
+    content: "\22";
+    display: block;
+    color: #000;
+    font-size: 14px;
+    font-family: ETmodules;
+	transition:.3s ease;
+	background:rgba(255,128,87,0.39);
+	color:#ff8057;
+	text-align: center;
+    border-radius: 100px;
+	width:26px;
+}
+#page-container span.menu-closed.menu-open:before {
+    content: "\22";
+	transform:rotate(180deg);
+	background:#ff8057;
+	color:#fff;
+}
+
+
+/*Header Codes - All the Codes for Main Header here*/
+.molti-custom-dropdown-content{
+-webkit-animation: scale-in-tr 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: scale-in-tr 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes scale-in-tr {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-tr {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/*END*/
+
+/*For Link Animation - Add class to any module "link effect" to add this effect*/
+.link-effect a {
+  cursor: pointer;
+  padding-bottom:5px;
+  transition: all 0.2s linear;
+  background: linear-gradient(to bottom, #FF8057 0%, #FF8057 98%); /*Change color of the underline from here*/
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 100%;
+}
+.link-effect a:hover {
+  background-size: 100% 2px;
+}
+/*Link effect CSS ends*/
+
+/*Link effect - white underline add this class "link-effect-white"*/
+.link-effect-white a {
+  cursor: pointer;
+  padding-bottom:5px;
+  transition: all 0.2s linear;
+  background: linear-gradient(to bottom, #fff 0%, #fff 98%); /*Change color of the underline from here*/
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 100%;
+}
+.link-effect-white a:hover {
+  background-size: 100% 2px;
+}
+/*END HERE*/
+
+
+/*Dropdown Menu Animation and styling for Main Header - Desktop*/
+.et-menu-nav .nav li li {
+    padding: 0 !Important;
+}
+/*Change the width of the Sub Menu*/
+.et-menu-nav .nav li ul{
+	width:250px !Important
+}
+/*Remove the default hover background for Dropdown Menu Link*/
+.et-menu-nav .nav ul li a:hover {
+    background-color: transparent;
+}
+/*To add more padding and Spacing around menu Item*/
+.et-menu-nav .et-menu li li a{
+	padding:10px 20px;
+	margin:3px 0;
+}
+/*This will add arrow Line to active Dropdown Menu link*/
+.et-menu-nav .et_pb_menu .nav li ul.sub-menu li.current-menu-item a:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    transition: all .2s ease-in-out;
+	background: #ff8057;
+	width:4px;
+	border-radius: 0px 3px 3px 0px;
+}
+/*Line shows on Hover on Sub Menu Link Hover*/
+.et-menu-nav .et-menu li li a:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    left: 0px;
+    transition: all .2s ease-in-out;
+	border-radius: 0px 3px 3px 0px;
+}
+.et-menu-nav .et-menu li li a:hover:before {
+    background: #ff8057;
+	width:4px;
+}
+/*To add Entrance and Exit Animation to Dropdown Menu*/
+
+/*Entrance Animation for Dropdown Menu*/
+.et-menu-nav .et-show-dropdown .sub-menu{
+-webkit-animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/*To add Box Shadow Corner Radius and Exit Animation to Dropdwon Menu*/
+.et-menu-nav .sub-menu{
+	box-shadow: 0px 5px 40px #0000002b !IMPORTANT;
+	border-radius:8px;
+	-webkit-animation: fade-out-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: fade-out-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/*Will add Arrow indicator to Dropdown Menu*/
+.et-menu-nav .sub-menu:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 11%;
+    top: -22px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    z-index: 1;
+}
+
+/*Keyframes for Dropdown menu Entrance Animation*/
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*Keyframes for Dropdown Menu Exit Animation*/
+@-webkit-keyframes fade-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+
+/*Stylings for the Homepage Starts here*/
+
+/*This will fix the issue with the Buttom Module Animation*/
+.et_pb_button_module_wrapper{
+	transition:all .3s ease !Important;
+}
+/*To make any column vertically centered - Enable Equal Column height in the Row Settings*/
+.et_pb_equal_columns>.et_pb_column{
+	margin-top:auto;
+	margin-bottom:auto;
+}
+/*To make buttons inline anywhere, add the class "inline-buttons-row" to the Row*/
+.inline-buttons-row .et_pb_button_module_wrapper{
+display:inline-block;
+}
+/*This will add hover transition to Blurb Module's Image*/
+.et_pb_main_blurb_image{
+	transition:.3s ease;
+}
+/*To push the Image a bit small on the Homepage*/
+.service-card:hover .et_pb_main_blurb_image{
+	transform:scale(0.90) !Important
+}
+/*The Features Section on the Homepage - Adding some Hover effect to blurb Image*/
+.feature .et_pb_animation_off{
+    background: #ff8057;
+    padding: 10px;
+    border-radius: 10px;
+    transition:.3s ease;
+}
+.feature:hover .et_pb_animation_off{
+	 box-shadow: 35px -15px 0px #ff80571f, -25px 15px 0px #ff80571f;
+	 transform:scale(1.2)
+}
+
+
+/*Creating a Testimonial Carousel with Slider Module*/
+
+/*manually add the image url to the slide controller*/
+.molti-testimonial .et-pb-controllers a:nth-child(1) {
+  content: url('/wp-content/uploads/2020/05/Team-1.jpg');
+}
+.molti-testimonial .et-pb-controllers a:nth-child(2) {
+  content: url('/wp-content/uploads/2020/05/Team-7.jpg');
+}
+.molti-testimonial .et-pb-controllers a:nth-child(3) {
+  content: url('/wp-content/uploads/2020/05/Team-5.jpg');
+}
+.molti-testimonial .et-pb-controllers a:nth-child(4) {
+  content: url('/wp-content/uploads/2020/05/Team-3.jpg');
+}
+/*size and position of images*/
+.molti-testimonial .et-pb-controllers a {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin: 0 15px;
+  transition:.3s ease;
+}
+/*change opacity on hover*/
+.molti-testimonial .et-pb-controllers a:hover {
+ opacity: 1;
+ transform:scale(0.90)
+}
+/*make the active slide slightly bigger*/
+.molti-testimonial .et-pb-controllers .et-pb-active-control {
+  width: 100px;
+  height: 100px;
+  margin-bottom: -5px;
+  box-shadow:0px 1px 20px #0000002b;
+}
+
+/*force off the text shadows*/
+.molti-testimonial .et_pb_slide_description {
+text-shadow: none!important;
+  margin-bottom: 20px!important;
+}
+/*change the slide description animation*/
+.molti-testimonial .et-pb-active-slide .et_pb_slide_description {
+ animation-name: fadeIn;
+}
+
+
+@media (max-width: 980px) {
+/*size and position of images - mobile*/
+.molti-testimonial .et-pb-controllers a {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+  /*make the active slide slightly bigger - mobile*/
+.molti-testimonial .et-pb-controllers .et-pb-active-control {
+  width: 60px;
+  height: 60px;
+  margin-bottom: -5px;
+  box-shadow:0px 1px 20px #0000002b;
+	}
+  /*adjust image position - mobile*/
+.molti-testimonial .et-pb-controllers {
+    bottom: 10%;
+}
+}
+
+/*position the images - mobile*/
+@media (max-width: 767px) {
+.molti-testimonial .et-pb-controllers {
+  bottom: 20%;
+}
+/*position the images - mobile*/
+.molti-testimonial .et_pb_slide_description {
+  margin-bottom: 50px!important;
+}
+}
+
+
+
+
+
+/*Styling for the ""Homepage"" END here.*/
+
+
+
+
+/*Stylings for the "Contact Page"" Starts here*/
+
+/*Contact Info after the Hero Section*/
+
+/*This is to add animation when hoverout of the card - exit*/
+.molti-view-button{
+	opacity:0;
+	-webkit-animation: fade-out-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: fade-out-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/*Animation when hover to card - entrance*/
+.molti-column:hover .molti-view-button{
+	opacity:1;
+	-webkit-animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+/*Keyframes for the Button to show with Animation - entrance*/
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/*Keyframe for the button to go away with animation - exit*/
+@-webkit-keyframes fade-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+
+/*The text before Contact Form*/
+mark-shy-text{
+	background: #ff80571a !Important;
+    color: #FF8057 !Important;
+    padding: 10px 25px;
+    border-radius: 100px;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+/*FAQ Toggle Module - Desiging the Toggle Module*/
+.molti-faq .et_pb_toggle_title:before {
+    content: "\4c" !IMPORTANT;
+    font-weight: 900;
+	transition:.3s ease;
+}
+/*Stylings for when the Toggle is open*/
+.molti-faq.et_pb_toggle_open .et_pb_toggle_title:before{
+	transform: rotate(180deg);
+	content: "\22" !IMPORTANT;
+	color: #FF8057 !Important
+}
+/*Stylings for the Contact Page ENDs here*/
+
+
+
+ 
+
+
+/*Stylings for the "About Us" Page Starts here*/
+
+/*Styling for the text "Our History" in the About page.*/
+mark-history{
+  background:rgba(255,128,87,0.23);
+  color:#FF8057;
+  padding:10px 20px;
+  border-radius:100px;
+}
+/*Will make buttons centered after the Testimonial section on About Page*/
+.row-after-testimonials{
+	text-align:center;
+}
+/*Hides the member bio by default*/
+.member-bio, .member-social-media-follow, .member-about-button{
+	opacity:0;
+}
+/*To show member bio info when hover to member card*/
+.member-card:hover .member-bio{
+	opacity:1;
+	-webkit-animation: fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/*This will add entrance animation to Social Follow Module when hover to member card*/
+.member-card:hover .member-social-media-follow{
+	opacity:1;
+	-webkit-animation: fade-in-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/*This is to add entrance animation to the button in the member card*/
+.member-card:hover .member-about-button{
+	opacity:1;
+	-webkit-animation: fade-in-bottom 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/*Keyframes for animation for all elements in member card*/
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*Styling for About Page Ends here*/
+
+
+/*Styling for the Services Page Starts here*/
+
+/*This will change the H4 color to white when hover over to service card*/
+.service-card-2:hover .et_pb_blurb h4{
+	color:#fff !important
+}
+/*This will change the the bold text to white on hover to service card*/
+.service-card-2:hover .et_pb_blurb strong{
+	color:#fff !important
+}
+/*This will change the blurb description color to white when hover over to service card*/
+.service-card-2:hover .et_pb_blurb_description{
+	color:#fff !important
+}
+/*This will add a white background to blurb image when hover to service card*/
+.service-card-2:hover .et_pb_main_blurb_image{
+	background:#fff;
+    width:50px;
+    padding:10px;
+    border-radius:5px;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.36);
+}
+
+/*Molti Custom Testimonial Styling*/
+
+/*This will add an active state to active Testimonial image*/
+.active-img{
+	transform:scale(1.1);
+	transition: all .3s ease;
+}
+/*To add an overlay to active Image in testimonial*/
+.active-img:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0 0 0 / 35%);
+	z-index:10;
+	border-radius:10px;
+}
+/*This will add border inside the image to active testimonial image*/
+.active-img:after{
+	content: '';
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #fff;
+    z-index: 10;
+    border-radius: 10px;
+    left: 10px;
+    top: 4.7%;
+	transition: all .3s ease;
+}
+/*Adjusting for Mobile*/
+@media only screen and ( max-width: 479px ) {
+.active-img:after{
+	display:none;
+}
+.active-img{
+	transform:scale(1.05);
+}
+}
+/*This will hide other testimonial content by default*/
+.not-active-text{
+	display:none !Important;
+}
+/*This will show the testimonoial content when switched to other testimonial item */
+.active-text{
+	display:block !Important;
+	-webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/*Animation keyframes*/
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*Styling for the Single Service Page Starts here*/
+
+/*Molti Custom Progess Tabs*/
+
+/*This will add an active state to the active Blurb Image */
+.active-tab .et_pb_main_blurb_image {
+    background: rgba(255,128,87,0.18);
+    border-radius: 10px;
+}
+/*This will change the H4 Color for the active tab item*/
+.active-tab.et_pb_blurb h4 {
+    color:#FF8057 !Important;
+}
+/*Ends here*/
+
+
+/*Styling for Single Job Page starts here*/
+.active-link-application:before{
+	content:"";
+	position:absolute;
+    top:60px;
+    left:-16px;
+	display:block;
+	width:135px;
+	border-radius:3px 3px 0px 0px;
+	background: #ff8057;
+    border:2px solid #ff8057;
+	transition:.3s ease;
+}
+.active-link:after{
+	content:"";
+	position:absolute;
+    top:60px;
+    left:-8px;
+	display:block;
+	width:135px;
+	border-radius:3px 3px 0px 0px;
+	background: #ff8057;
+    border:2px solid #ff8057; 
+	transition:.3s ease;
+}
+/*END HERE*/
+
+
+/*Styling for the Pricing Page Starts here*/
+.molti-active-switch-button.et_pb_button{
+	color: #ff8057 !Important;
+	background:#fff !Important;
+	box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.11);
+}
+/*Hehe, It ends here*/
+
+
+/*Styling for Blog - Advanced Page Starts here*/
+/*CSS for active switch*/
+.active-blog.et_pb_button{
+	color: #ff8057 !Important;
+	background:#fff !Important;
+	box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.11);
+}
+/*Blog Wrapped Styling*/
+/*move wrapped title, meta, and text up over the image*/
+.molti-blog-content{
+	position: absolute;
+	bottom: -10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	padding: 30px;
+	z-index: 1;
+}
+/*keep the moved items positioned with their parent items*/
+.molti-blog-latest .et_pb_blog_grid article {
+	position: relative;
+}
+/*remove spacing around entire blog post*/
+.molti-blog-latest .et_pb_blog_grid .et_pb_post {
+	padding: 0px;
+}
+/*remove negative margins on blog featured image*/
+.molti-blog-latest .et_pb_image_container {
+	margin: 0;
+}
+/*remove the margin below the featured image frame*/
+.molti-blog-latest .et_pb_post .entry-featured-image-url {
+	margin: 0;
+}
+/*Adds overlay to the Latest Post Featured Image*/
+.molti-blog-latest .entry-featured-image-url::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+@media only screen and ( max-width: 479px ) {
+	.molti-blog-content{
+		bottom:-45%;
+	}
+}
+/*Blog List layout Styling*/
+/*add media query so changes only affect tablet and desktop*/
+/*set the image width*/
+.molti-blog-list .entry-featured-image-url  {
+width: 25%;
+float: left;
+margin-bottom: 0!important;
+}
+/*set the details width*/
+.molti-blog-list .entry-title,
+.molti-blog-list .post-meta,
+.molti-blog-list .post-content {
+width: 75%;
+float: left;
+padding-left: 10px;
+margin-top:-5px;
+}
+/*To reduce bottom margin of the list blog*/
+.molti-blog-list .et_pb_post {
+margin-bottom: 27px;
+	-webkit-animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: fade-in 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/*Blog Grid layout Styling*/
+/*make the parts of the blog post flexible*/
+.molti-blog-grid .et_pb_post {
+	display: flex;
+	flex-direction: column;
+    position: relative;
+}
+/*featured image*/
+.molti-blog-grid .et_pb_image_container, .molti-blog-grid .entry-featured-image-url {
+	order: 2;
+}
+/* post title*/
+.molti-blog-grid .entry-title {
+	order: 3;
+}
+/* post meta*/
+.molti-blog-grid .post-meta {
+	order: 1;
+    z-index: 1;
+    margin: -10px 0px -13px -5px;
+}
+/*This will give Blog Post & Portfolio Meta Link button looks of Molti Theme */
+.molti-blog-grid .post-meta a, .et_pb_portfolio_item .post-meta a{
+	background-image: linear-gradient(151deg,#FF8057 38%,#ff5c26 100%);
+    padding: 6px 15px;
+    color: #fff !IMPORTANT;
+    border-radius: 5px;
+    margin-left: -10px;
+    margin-right: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+	transition:.2s ease;
+	text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+}
+/*Some adjustments for Meta links*/
+.et_pb_portfolio_item .post-meta a{
+    position: relative;
+    left: 10px;
+    top: 10px;
+	margin-left: -6px !important;
+    margin-right: 7px !important;
+}
+/*To add hover effect to meta links*/
+.molti-blog-grid .post-meta a:hover, .et_pb_portfolio_item .post-meta a:hover{
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+}
+/*To style the Post publish date for Blog Grid*/
+.molti-blog-grid .published{
+    background: #fff;
+    position: absolute;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px #0000001a;
+    top: 155px;
+    right: -18px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+}
+/*Reordering the Blog Post Content*/
+/*excerpt and button*/
+.molti-blog-grid .post-content {
+	order: 4;
+}
+/*For sidebar module*/
+.molti-sidebar .widget_categories ul li a{
+	color:#000 !Important;
+}
+.molti-sidebar .widget_categories ul li:hover a{
+	color:#ff8057 !Important;
+}
+.molti-sidebar .widget_categories ul li {
+    margin-bottom: .5em;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding: 20px 20px;
+	transition: .2s;
+}
+.molti-sidebar .widget_categories ul li:hover {
+    padding: 20px 40px;
+}
+.molti-sidebar .widget_categories ul li a:before {
+	font-family: 'ETmodules';
+    content: "\24";
+    font-size: 18px;
+    position: absolute;
+    opacity: 0;
+    font-weight: 600;
+    left: 0;
+    transition: .1s;
+}
+.molti-sidebar .widget_categories ul li:hover a:before {
+    opacity: 1;
+    left: 15px;
+    transition: .3s;
+	color: #ff8057;
+}
+/*ENDS HERE*/
+
+/*Styling for Single Post page starts here*/
+
+/*To add button looks to the Cateofy and Tags*/
+.molti-category a, .molti-tags a{
+    background-image: linear-gradient(151deg,#FF8057 38%,#ff5c26 100%);
+	color:#fff;
+    padding: 6px 15px;
+    border-radius: 5px;
+    margin-left: -10px;
+    margin-right: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+	transition:.2s ease;
+}
+/*hover effect*/
+.molti-category a:hover, .molti-tags a:hover{
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.3);
+}
+/*Adjusting the Tags positioning*/
+.molti-tags a{
+	margin:0 0 0 10px !Important
+}
+/*Post Navigation Module on single post page styling*/
+.nav-label{
+    position: relative;
+    top: 13px;
+    left: -2px;
+}
+@media only screen and ( max-width: 479px ) {
+.nav-label{
+    top: 0px;
+}
+/*Adjusting the the Comments section styling for single post page*/
+#respond .comment-form-comment {
+    width: 100% !Important;
+	margin-right:0px;
+}
+}
+/*End adjusting indicator*/
+/*To change the post of next label of post navigation module*/
+.nav-next .nav-label{
+	left:-10px;
+}
+/*Adjusting animation for tabs*/
+.molti-comments, .molti-article{
+	animation:.3s
+}
+/*Adding animation to the Comment form fields*/
+#commentform input[type=email], #commentform input[type=text], #commentform input[type=url], #commentform textarea{
+	transition:.3s ease !Important;
+}
+/*To make the Comment field half the width*/
+#respond .comment-form-comment {
+    width: 50%;
+    float: left;
+	margin-right:30px;
+}
+/*To make the Comment field fullwidth for logged in user*/
+.logged-in #respond .comment-form-comment {
+    width: 100% !Important;
+	margin-right:0;
+}
+/*To change the height of the textarea - comment feild*/
+#commentform textarea {
+    height: 195px!important;
+}
+/*To adjust the "save info" text position*/
+.comment-form-cookies-consent{
+margin-top:15px;	
+}
+/*This will add active indicator to the "Read Article".*/
+.active-link-read:after{
+	content:"";
+	position:absolute;
+    top:60px;
+    left:13px;
+	display:block;
+	width:135px;
+	border-radius:3px 3px 0px 0px;
+	background: #ff8057;
+    border:2px solid #ff8057; 
+	transition:.3s ease;
+}
+/*This will add active indicator to the "Discussion"*/
+.active-link-discussion:after{
+	content:"";
+	position:absolute;
+    top:60px;
+    right:-11px;
+	display:block;
+	width:135px;
+	border-radius:3px 3px 0px 0px;
+	background: #ff8057;
+    border:2px solid #ff8057; 
+	transition:.3s ease;
+}
+
+
+
+/*Styling for Single Project Page*/
+/*To style the scrollbar for Highlights section - You can add class "highlighs-section" to any section, row etc to style the Scrollbar*/
+.highlights-section ::-webkit-scrollbar {
+	width: 10px;
+    height: 10px;
+}
+.highlights-section ::-webkit-scrollbar-thumb {
+	background-color: #d8d3d3;
+	border-radius: 100px
+}
+/*End styling scrollbar*/
+/*Animation for the text shown on hover for image*/
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*END HERE*/
+
+
+/*Styling for Portfolio Page*/
+/*To style the Portfolio Gird for both Portfolio Modules*/
+/*To style the Portfolio Gird for both Portfolio Modules*/
+.molti-portfolio .et_pb_portfolio_item, .molti-portfolio-2 .et_pb_grid_item{
+    margin-right: 30px !IMPORTANT;
+    border-radius:10px;
+    box-shadow:0px 5px 20px rgb(0 0 0 / 6%);
+    padding: 0 0 40px 0;
+    transition:.2s ease;
+    background: #fff;
+}
+/*Potfolio Modules 3 Column Width Settings*/
+@media only screen and ( min-width: 768px ) {
+.molti-portfolio .et_pb_grid_item, .molti-portfolio-2 .et_pb_grid_item {
+width: 30.333% !important;
+margin: 0 3.5% 3.5% 0 !important;
+}
+.molti-portfolio .et_pb_grid_item:nth-child(3n), .molti-portfolio-2 .et_pb_grid_item:nth-child(3n) {
+margin-right: 0 !important;
+}
+.molti-portfolio .et_pb_grid_item:nth-child(3n+1), .molti-portfolio-2 .et_pb_grid_item:nth-child(3n+1) {
+clear: left;
+}
+.molti-portfolio .et_pb_grid_item:nth-child(4n+1), .molti-portfolio-2 .et_pb_grid_item:nth-child(4n+1) {
+clear: unset !important;
+}
+}
+/*Adjusting the Portfolio for different screen sizes*/
+@media only screen and ( max-width: 479px ) {
+.molti-portfolio .et_pb_portfolio_item, .molti-portfolio-2 .et_pb_grid_item{
+	width: 91%!important;
+}
+}
+@media only screen and ( min-width: 480px ) and ( max-width: 555px ) {
+.molti-portfolio .et_pb_portfolio_item, .molti-portfolio-2 .et_pb_grid_item{
+	width: 43%!important;
+}
+}
+@media only screen and ( min-width: 556px ) and ( max-width: 666px ) {
+.molti-portfolio .et_pb_portfolio_item, .molti-portfolio-2 .et_pb_grid_item{
+	width: 44%!important;
+}
+}
+@media only screen and ( min-width: 667px ) and ( max-width: 767px ) {
+.molti-portfolio .et_pb_portfolio_item, .molti-portfolio-2 .et_pb_grid_item{
+	width: 45%!important;
+}
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
+.molti-portfolio .et_pb_portfolio_item, .molti-portfolio-2 .et_pb_grid_item{
+	width: 45%!important;
+}
+}
+/*To add hover effect to Portfolio Grid*/
+.molti-portfolio .et_pb_portfolio_item:hover, .molti-portfolio-2 .et_pb_grid_item:hover{
+	box-shadow:0px 10px 50px rgb(0 0 0 / 15%);
+	transform:translate(0%,-3%)
+}
+/*To add button on Hover for Portfolio Grid*/
+.molti-portfolio .et_portfolio_image:hover:before, .molti-portfolio-2 .et_portfolio_image:hover:before{
+	content: "View Details";
+    position: absolute;
+    top: 45%;
+    left: 32%;
+    z-index: 2;
+    background: #fff;
+    border-radius: 100px;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0px 2px 25px #0000004a;
+	-webkit-animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/*Animation keyframes for the button*/
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*END Animation keyframes*/
+
+/*Adjusting the Portfolio Filter buttons for Mobile*/
+@media only screen and  (max-width: 767px){
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li {
+    width: auto !Important;
+}
+.et_pb_portfolio_filters li a {
+	padding: 7px 10px !important;
+    margin: 0 5px !IMPORTANT;
+    font-size: 10px !Important;
+}
+}
+/*Styling the Portfolio Filter buttons*/
+.et_pb_portfolio_filters li a {
+    color: #ff8057 !Important;
+    border: 2px solid #ff8057 !Important;
+    border-radius: 5px !important;
+    padding: 13px 25px !Important;
+	margin: 0 7px !Important;
+	transition:.3s ease;
+	margin-bottom:10px !Important;
+}
+/*Hover for portflio buttons*/
+.et_pb_portfolio_filters li a:hover {
+   background-color: #ff80571a !Important;
+}
+/*For active Portfolio Filter Button*/
+.et_pb_portfolio_filters li a.active {
+    background-image: linear-gradient(151deg,#FF8057 38%,#ff5c26 100%);
+    border-radius: 5px;
+    color: #fff !Important;
+    border: 2px solid #ff8057;
+    box-shadow: 0px 5px 13px rgb(0 0 0 / 20%);
+}
+/*Styling the Portfolio Pagination*/
+.et_pb_portofolio_pagination{
+	border:none !important;
+}
+.et_pb_portofolio_pagination a {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000!important;
+    padding: 10px 15px;
+    border: 2px solid #ff8057;
+    border-radius: 5px;
+	transition:.3s ease;
+}
+.et_pb_portofolio_pagination ul li a.active{
+    background-image: linear-gradient(151deg,#FF8057 38%,#ff5c26 100%);
+    color: #fff !IMPORTANT;
+}
+/*END HERE*/
+
+
+/*CSS for Showcase Page*/
+/*To hide the "View Demo" text by default*/
+.demo-text{
+  opacity:0;
+}
+/*To show it on hover*/
+.image:hover .demo-text{
+  opacity:1;
+  transition: .2s ease;
+}
+mark-showcase{
+  background: rgba(255,128,87,0.2);
+  padding:9px 30px;
+  border-radius:100px;
+  color:#ff8057;
+}
+mark1-showcase{
+  background: #ff8057;
+  padding:9px 30px;
+  border-radius:100px;
+  color:#fff;
+}
+/*To add a close Icon when clicked on the Info Floating Icon on SHowcase Page*/
+.open:before{
+  content:"\4d";
+  position:absolute;
+  font-family:ETMOdules;
+  z-index:999;
+  background:#fff;
+  padding:5px;
+  font-size:30px;
+  right:8px;
+  color:#ff8057;
+  font-weight:bold;
+}
+/*To Style the Video Play Button*/
+.et_pb_video_play:before {
+  font-family: ETmodules;
+  content: "\45";
+  background: #fff;
+  color: #ff8057;
+  font-size:60px;
+  padding: 20px;
+  border-radius:100px;
+  box-shadow: 0px 0px 0px 10px rgba(255,255,255,0.47), 0px 2px 20px rgba(0,0,0,0.28); 
+  transition:.3s ease;
+}
+/*Hover animation for the play button*/
+.et_pb_video_play:hover:before {
+  transform:scale(1.1) !Important;
+  box-shadow: 0px 0px 0px 20px rgba(255,255,255,0.47), 0px 2px 40px rgba(0,0,0,0.28);  
+}
+
+
+/*Fixing Switches not working in latest Divi*/
+.monthly-button, .featured-button {
+    z-index: 20;
+}
+
+/*Fixing Mega Menu*/
+
+.et-menu-nav li.mega-menu>ul:after{
+display:none;
+}
+.et-menu-nav li.mega-menu>ul{
+width:100% !important;
+}
+.et-menu-nav li.mega-menu.mega-menu-parent li>.sub-menu:after{
+display:none;
+}
+.et-menu-nav li.mega-menu.mega-menu-parent li>.sub-menu {
+box-shadow: none !important;
+background:transparent !important;
+}
+
+
+/*To remove the arrow icon on Sub sub Menu*/
+.nav li li ul:after{
+	display:none !Important;
+}
