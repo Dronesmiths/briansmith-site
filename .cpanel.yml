@@ -1,15 +1,8 @@
 ---
 deployment:
   tasks:
-    # Set deploy path to your live web root
-    - export DEPLOYPATH=/home1/spreaeb3/public_html/
-
-    # Sync everything from the repo to the site (except internal files)
+    - export DEPLOYPATH=/home1/spreaeb3/public_html/briansmith-site/
     - /bin/rsync -av --delete \
         --exclude '.git*' \
         --exclude '.cpanel.yml' \
         ./ $DEPLOYPATH
-
-    # Set correct file permissions
-    - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
-    - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
